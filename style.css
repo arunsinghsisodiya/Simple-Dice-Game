@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: linear-gradient(to top left, #753682, #bf2e34);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+/* Game Container */
+main {
+  width: 100rem;
+  height: 60rem;
+  display: flex;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  position: relative;
+}
+
+/* Player Panel */
+.player {
+  flex: 1;
+  padding: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.5s ease;
+}
+
+.player--active {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.player--active .player-name {
+  font-weight: 700;
+}
+.player--active .player-score {
+  font-weight: 500;
+}
+
+/* Player Name and Score */
+.player-name {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.player-score {
+  font-size: 8rem;
+  color: #c7365f;
+  margin-bottom: auto;
+}
+
+/* Current Score Box */
+.player-current {
+  background: #c7365f;
+  color: #fff;
+  border-radius: 9px;
+  padding: 2rem;
+  width: 65%;
+  text-align: center;
+  opacity: 0.8;
+  transition: opacity 0.5s ease;
+}
+
+.label-current {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+
+.score-current {
+  font-size: 3.5rem;
+}
+
+/* Dice Image */
+.dice {
+  position: absolute;
+  top: 17rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 10rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.controls {
+  position: absolute;
+  width: 100%;
+  bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.btn {
+  font-size: 1.8rem;
+  padding: 0.7rem 2.5rem;
+  border: none;
+  border-radius: 5rem;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  font-family: inherit;
+  text-transform: uppercase;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+/* Winner Styling */
+.player--winner {
+  background: #2f2f2f;
+}
+
+.player--winner .player-name {
+  color: #c7365f;
+  font-weight: 700;
+}
+
+/* Utility */
+.hidden {
+  display: none;
+}
